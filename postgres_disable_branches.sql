@@ -1,14 +1,12 @@
+
+-- Turn off SAP branches
 UPDATE commerce.branches
-SET branch_type = 'TEMP_INACTIVE'
-WHERE branch_number IN (
-  '702', '706', '724', '730', '746', '790', '794', '764', '748', '772',
-  '732', '752', '722', '786', '795', '796', '708', '712', '726', '744',
-  '754', '758', '760', '762', '768', '770', '778', '792', '793', '826'
-);
+SET branch_type = 'ACT'
+WHERE sap_enabled = true;
 
 UPDATE commerce.branches
 SET
-  branch_type = 'ACT',
+  branch_type = 'OFFLINE',
   sap_enabled = TRUE,
   sap_branch_number = CASE branch_number
     WHEN '702' THEN '4702'
