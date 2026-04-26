@@ -1,17 +1,12 @@
-// Turn off all SAP branches.
-//db.Branches.updateMany(
-//  { "sapEnabled": true },
-//  { "$set": { "branchType": "ACT" } }
-//)
+// Activate all SAP branches
 //
+db.Branches.updateMany(
+  { "sapEnabled": true },
+  { "$set": { "branchType": "ACT" } }
+)
+
+// Except for these.
 //
-//db.Branches.updateOne(
-//  { branchNumber: "204" },
-//  { $set: { branchType: "ACT" } }
-//);
-
-
-
 db.Branches.updateMany(
   {
     branchNumber: {

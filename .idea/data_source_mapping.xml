@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/mongo_disable_branches.js" value="37f0a6b7-05f9-4669-b5a1-a679524ef4d9" />
+    <file url="file://$PROJECT_DIR$/postgres_disable_branches.sql" value="55f44bcd-8bba-4de6-9fda-f718d7eb9340" />
+  </component>
+</project>
